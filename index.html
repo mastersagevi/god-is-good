@@ -88,7 +88,15 @@
     const imageMap = [
       "IMG-20250606-WA0074.jpg", "IMG-20250606-WA0075.jpg", "IMG-20250606-WA0046.jpg",
       "IMG-20250606-WA0047.jpg", "IMG-20250606-WA0050.jpg", "IMG-20250606-WA0051.jpg",
-      "IMG-20250606-WA0052.jpg", "IMG-20250606-WA0053.jpg", "IMG-20250606-WA0055.jpg"
+      "IMG-20250606-WA0052.jpg", "IMG-20250606-WA0053.jpg", "IMG-20250606-WA0055.jpg",
+      "IMG-20250606-WA0056.jpg", "IMG-20250606-WA0057.jpg", "IMG-20250606-WA0059.jpg", 
+      "IMG-20250606-WA0060.jpg", "IMG-20250606-WA0061.jpg", "IMG-20250606-WA0063.jpg",
+      "IMG-20250606-WA0064.jpg", "IMG-20250606-WA0065.jpg", "IMG-20250606-WA0066.jpg",
+      "IMG-20250606-WA0077.jpg",  "IMG-20250606-WA0067.jpg", "IMG-20250606-WA0069.jpg",
+      "IMG-20250606-WA0070.jpg",  "IMG-20250606-WA0071.jpg", "IMG-20250606-WA0072.jpg",
+      "IMG-20250606-WA0076.jpg",  "IMG-20250606-WA0073.jpg", "IMG-20250606-WA0044.jpg",
+      "IMG-20250606-WA0048.jpg",  "IMG-20250606-WA0049.jpg", "IMG-20250606-WA0066.jpg",
+      "IMG-20250606-WA0062.jpg",  "IMG-20250606-WA0045.jpg",
     ];
 
     const grid = document.querySelector(".grid");
@@ -104,10 +112,10 @@
         const userPass = prompt("Enter password to open this gift box:");
         if (userPass === passwords[i]) {
           const img = imageMap[i % imageMap.length];
-          alert("Password correct! Opening...");
+          alert("CONGRATULATIONS YOUR PRESENT LOADING 🥳🎉👏🤝👍🌷...");
           window.open(img, '_blank');
         } else {
-          alert("Incorrect password.");
+          alert("Incorrect password...Put a correct password.");
         }
       });
       grid.appendChild(box);
