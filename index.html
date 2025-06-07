@@ -110,10 +110,24 @@
       `;
       box.addEventListener("click", () => {
         const userPass = prompt("Enter password to open this gift box:");
+       
         if (userPass === passwords[i]) {
-          const img = imageMap[i % imageMap.length];
-          alert("CONGRATULATIONS YOUR PRESENT LOADING 🥳🎉👏🤝👍🌷...");
-          window.open(img, '_blank');
+  // Confetti burst 🎉
+  confetti({
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
+
+  alert("CONGRATULATIONS YOUR PRESENT LOADING 🥳🎉👏🤝👍🌷...");
+  window.open(img, '_blank');
+
+  // Optional: Fade out the box
+  box.style.transition = "opacity 0.8s ease";
+  box.style.opacity = 0;
+  setTimeout(() => box.remove(), 800);
+}
+
         } else {
           alert("Incorrect password...Put a correct password.");
         }
